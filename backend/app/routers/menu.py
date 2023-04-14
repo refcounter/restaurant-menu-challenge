@@ -4,7 +4,7 @@ from typing import List
 from .. import database, schemas
 from ..repo import menu
 
-router = APIRouter(tags=['Menu'])
+router = APIRouter(tags=['Menu'], prefix='/menu')
 
 @router.get('/')
 def main_menu():
