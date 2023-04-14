@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 
 from .. import models
 
+# Probably won't be used
 def get_all_dishes(db: Session):
     return db.query(models.Dish).all()
 

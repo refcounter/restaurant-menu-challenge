@@ -13,7 +13,7 @@ def main_menu():
 
 @router.get('/all', response_model=List[schemas.DishBase])
 def get_all(db = Depends(database.get_db)):
-    return menu.get_all_dishes()
+    return menu.get_all_dishes(db, ) # only fetches 5 dishes
 
 @router.get('/{id}', response_model=schemas.DishBase)
 def get_by_id(db = Depends(database.get_db)):
